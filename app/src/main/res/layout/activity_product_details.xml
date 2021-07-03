@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<variable
+
+    name="data"
+    type="com.example.mygraduationprojectamit.home.products.Product"
+
+
+    />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        tools:context=".ProductDetails">
+
+        <ImageView
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:id="@+id/img_product_details"
+            android:layout_gravity="center"
+            android:src="@drawable/product"
+            android:scaleType="fitXY"
+            picasso="@{data.avatar}"
+
+            android:layout_marginBottom="@dimen/_20sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_nameofproduct"
+            android:text="@{data.title}"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_descrip_product"
+            android:text="@{data.name}"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textColor="#000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:background="#000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="wrap_content"
+                android:text="@{data.priceFinalText}"
+                android:id="@+id/product_price"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="#DA2131"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:id="@+id/bt_product_decrement"
+                android:text="-"
+
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_margin="@dimen/_5sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:id="@+id/et_productnum"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#000"
+
+                    android:text="0"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:id="@+id/bt_product_increment"
+                android:text="+"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:background="#000"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_product_moredetailes"
+            android:text="@{data.description}"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="#000"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_cart"
+            android:id="@+id/bt_addtocart"
+            android:onClick="addToCart" />
+
+    </LinearLayout>
+</layout>

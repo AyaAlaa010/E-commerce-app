@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.mygraduationprojectamit.cart.database.ProductUser" />
+
+</data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+
+        >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_weight="3">
+
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="match_parent"
+            android:id="@+id/img_cartproduct"
+            android:scaleType="fitXY"
+            picasso="@{data.product.avatar}"
+            android:layout_marginEnd="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_cartdescription"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="@{data.product.title}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_cartdescriptionInDetailes"
+                android:textColor="#000"
+                android:text="@{data.product.name}"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.product.priceFinalText}"
+                    android:id="@+id/cart_price"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="#DA2131"
+
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:id="@+id/bt_cart_decrement"
+                    android:text="-"
+
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_margin="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:id="@+id/et_cart_productnum"
+                        android:text="@{String.valueOf(data.amount)}"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="#000"
+
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:id="@+id/bt_product_increment"
+                    android:text="+"
+
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

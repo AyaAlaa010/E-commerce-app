@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+<variable
+    name="CategoriesModel"
+    type="com.example.mygraduationprojectamit.categories.categoryApis.Category" />
+    </data>
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_130sdp"
+    android:id="@+id/img_category_item"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    picasso="@{CategoriesModel.avatar}"
+    android:scaleType="fitXY"
+
+/>        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:text="@{CategoriesModel.name}"
+        app:layout_constraintTop_toTopOf="@id/img_category_item"
+            app:layout_constraintBottom_toBottomOf="@id/img_category_item"
+            app:layout_constraintStart_toStartOf="@id/img_category_item"
+            app:layout_constraintEnd_toEndOf="@id/img_category_item"
+            android:textSize="@dimen/_20sdp"
+           android:elevation="@dimen/_10sdp"
+        android:fontFamily="cursive"
+        android:textColor="#fff"
+android:background="#AEAAAA"
+            android:id="@+id/tv_category_name"
+            android:gravity="center_vertical" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">mygraduationproject(amit)</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="categories">Categories</string>
+    <string name="cart">Cart</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="go_sign_up">GO Sign Up</string>
+    <string name="name">Name</string>
+    <string name="smart_display_45_inches">Smart Display - 45-inches</string>
+    <string name="smart_display_43_inches">smart display - 43-inches</string>
+    <string name="contex_le_55sz101_43_inch_uhd_4k_d_led">contex LE-55SZ101 -43-inch UHD 4K D-LED</string>
+    <string name="_5720_egp">5720 EGP</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="gnhmy_yfyf_k_jjh_zdddddzd_vbvc_aefefd_fbm_k_dffr_vvbb_nn_olku_sffe_vggft_mjuy_ased_bgfrt_mjut_ascde_vfrt_bgyh_njui_mkol">gnhmy yfyf k.jjh zdddddzd vbvc aefefd fbm,,k dffr vvbb nn olku sffe vggft mjuy ased bgfrt mjut ascde vfrt bgyh njui mkol</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="pink_back_pag_for_girles">pink back pag for girles ....</string>
+    <string name="pink_back_pag">pink back pag</string>
+</resources>
